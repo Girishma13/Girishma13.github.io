@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Girishma Lalam – AI & ML Engineer in the Making</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EEF3F6; --surface:#FFFFFF; --ink:#14233A; --muted:#51627A; --line:#CBD6E0;
+  --sun:#E8960C; --wind:#18787A; --sunsoft:#FCEFD3; --windsoft:#D8EEEE;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1B2D; --surface:#17263D; --ink:#E8EEF5; --muted:#9FB0C6; --line:#2B3E58;
+    --sun:#F5B544; --wind:#4FC3C5; --sunsoft:#3A2F17; --windsoft:#143A3E; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1B2D; --surface:#17263D; --ink:#E8EEF5; --muted:#9FB0C6; --line:#2B3E58;
+  --sun:#F5B544; --wind:#4FC3C5; --sunsoft:#3A2F17; --windsoft:#143A3E; color-scheme:dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 "IBM Plex Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","IBM Plex Sans",system-ui,sans-serif;margin:0;line-height:1.1;letter-spacing:-.02em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--wind);outline-offset:3px;border-radius:4px}
+.wrap{max-width:980px;margin:0 auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;gap:16px;flex-wrap:wrap}
+nav b{font-family:"Bricolage Grotesque",sans-serif;font-size:20px}
+nav div{display:flex;gap:20px;font-size:15px}
+nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--ink)}
+.hero{display:grid;grid-template-columns:1.3fr 1fr;gap:32px;align-items:center;padding:48px 0 72px}
+.hero h1{font-size:clamp(46px,9vw,92px);font-weight:800}
+.hero p{max-width:52ch;color:var(--muted);font-size:19px;margin:22px 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;text-decoration:none;font-weight:500;border:2px solid var(--ink)}
+.btn.main{background:var(--ink);color:var(--bg)}
+.btn:hover{border-color:var(--sun)}
+.scene{width:100%;height:auto;max-width:380px;justify-self:center}
+.blades{transform-origin:200px 150px;animation:spin 14s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.blades{animation:none}html{scroll-behavior:auto}}
+section{padding:56px 0;border-top:1px solid var(--line)}
+section>.wrap>h2{font-size:clamp(30px,5vw,42px);margin-bottom:28px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.facts{margin:0;padding:0;list-style:none;display:grid;gap:14px}
+.facts li{background:var(--surface);border-left:4px solid var(--sun);padding:14px 18px;border-radius:0 10px 10px 0}
+.facts li:nth-child(even){border-color:var(--wind)}
+.facts span{display:block;color:var(--muted);font-size:14px}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.skills div{background:var(--surface);border-radius:14px;padding:20px 22px}
+.skills h3{font-size:19px;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{background:var(--windsoft);padding:4px 12px;border-radius:999px;font-size:14px}
+.proj{background:var(--surface);border-radius:18px;padding:28px;margin-bottom:24px}
+.proj.solar{border-top:6px solid var(--sun)}.proj.code{border-top:6px solid var(--wind)}
+.proj h3{font-size:26px;margin-bottom:6px}
+.proj .tag{color:var(--muted);font-size:15px;margin-bottom:14px}
+.proj ul{margin:0 0 16px;padding-left:20px}.proj li{margin-bottom:8px}
+.proj .chips span{background:var(--sunsoft)}
+.proj.code .chips span{background:var(--windsoft)}
+details{margin-top:8px}
+summary{cursor:pointer;font-weight:500}
+.timeline{border-left:3px solid var(--line);padding-left:24px;display:grid;gap:28px}
+.timeline h3{font-size:21px}
+.timeline small{color:var(--muted);font-size:15px}
+.timeline .score{display:inline-block;margin-top:6px;background:var(--sunsoft);padding:2px 12px;border-radius:999px;font-size:14px}
+.certs{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.certs li{background:var(--surface);padding:16px 20px;border-radius:12px}
+.contact p{max-width:50ch;color:var(--muted)}
+.links{display:flex;gap:14px;flex-wrap:wrap;margin-top:20px}
+footer{padding:32px 0;color:var(--muted);font-size:14px;text-align:center}
+@media (max-width:720px){.hero,.about{grid-template-columns:1fr}.scene{max-width:260px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <b>Girishma Lalam</b>
+    <div><a href="#about">About</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#contact">Contact</a></div>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <h1>Girishma Lalam</h1>
+      <p>I’m a Computer Science student specializing in AI & Machine Learning. I build full-stack apps that put ML models to work, from catching copied code to choosing where solar and wind farms should go.</p>
+      <div class="btns">
+        <a class="btn main" href="#projects">See my projects</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <svg class="scene" viewBox="0 0 400 400" role="img" aria-label="A sun above a spinning wind turbine">
+      <circle cx="310" cy="80" r="46" fill="var(--sun)"/>
+      <g stroke="var(--sun)" stroke-width="5" stroke-linecap="round">
+        <path d="M310 14v-8M310 146v8M244 80h-8M376 80h8M263 33l-6-6M357 127l6 6M357 33l6-6M263 127l-6 6"/>
+      </g>
+      <path d="M0 350 Q100 320 200 345 T400 335 V400 H0Z" fill="var(--windsoft)"/>
+      <path d="M192 150h16l8 200h-32z" fill="var(--ink)"/>
+      <g class="blades" fill="var(--wind)">
+        <path d="M200 150 L190 40 Q200 28 210 40Z"/>
+        <path d="M200 150 L190 40 Q200 28 210 40Z" transform="rotate(120 200 150)"/>
+        <path d="M200 150 L190 40 Q200 28 210 40Z" transform="rotate(240 200 150)"/>
+      </g>
+      <circle cx="200" cy="150" r="10" fill="var(--ink)"/>
+    </svg>
+  </header>
+</div>
+
+<section id="about"><div class="wrap">
+  <h2>About me</h2>
+  <div class="about">
+    <p>I’m a B.Tech student at VVIT, Nambur, studying Computer Science and Engineering with a focus on Artificial Intelligence & Machine Learning. I’m strong in Java, data structures and problem-solving, and I enjoy turning those basics into complete products: a React front end, an API behind it, a database, and a model that does something useful.</p>
+    <ul class="facts">
+      <li><span>Degree</span>B.Tech CSE (AI & ML), 2023–2027</li>
+      <li><span>CGPA</span>8.26</li>
+      <li><span>Currently</span>Infosys Springboard Virtual Internship 7.0</li>
+      <li><span>Looking for</span>Software and ML roles where I can build scalable solutions</li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div><h3>Languages</h3><div class="chips"><span>Java</span><span>JavaScript</span><span>SQL</span></div></div>
+    <div><h3>Web</h3><div class="chips"><span>HTML</span><span>React.js</span><span>Node.js</span><span>Express.js</span><span>FastAPI</span></div></div>
+    <div><h3>Data & ML</h3><div class="chips"><span>PostgreSQL</span><span>PostGIS</span><span>Random Forest</span><span>TF-IDF</span><span>Cosine similarity</span></div></div>
+    <div><h3>Core subjects</h3><div class="chips"><span>DSA</span><span>OOP</span><span>DBMS</span></div></div>
+    <div><h3>Tools</h3><div class="chips"><span>VS Code</span><span>Jupyter</span><span>Google Colab</span><span>GitHub</span><span>Docker</span></div></div>
+    <div><h3>Working style</h3><div class="chips"><span>Time management</span><span>Collaboration</span><span>Communication</span><span>Critical thinking</span></div></div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <h2>Projects</h2>
+
+  <article class="proj solar">
+    <h3>Solar Wind Deployment Intelligence Platform</h3>
+    <div class="tag">Full-stack + ML · Built during my Infosys Springboard internship</div>
+    <ul>
+      <li>Built a platform that helps assess where solar and wind farms can be placed.</li>
+      <li>Pulls data from NASA POWER, OpenStreetMap and Open-Elevation APIs.</li>
+      <li>Random Forest models score each site’s suitability and recommend energy options.</li>
+      <li>Deployed the app with Docker.</li>
+    </ul>
+    <div class="chips"><span>React</span><span>FastAPI</span><span>PostgreSQL/PostGIS</span><span>REST APIs</span><span>Random Forest</span><span>Docker</span></div>
+  </article>
+
+  <article class="proj code">
+    <h3>Source Code Plagiarism Detection System</h3>
+    <div class="tag">Full-stack + ML</div>
+    <ul>
+      <li>Built a system that detects plagiarism between source code submissions.</li>
+      <li>Cleans the code first, then compares submissions using TF-IDF and cosine similarity.</li>
+      <li>Returns a similarity score for each pair of submissions.</li>
+    </ul>
+    <div class="chips"><span>React</span><span>Node.js</span><span>Express.js</span><span>Java</span><span>PostgreSQL</span></div>
+  </article>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <h2>Experience</h2>
+  <div class="timeline">
+    <div>
+      <h3>Intern, Infosys Springboard Virtual Internship 7.0</h3>
+      <small>2026 · Virtual</small>
+      <p>Developed the Solar Wind Deployment Intelligence Platform end to end with React, FastAPI and PostgreSQL/PostGIS. Integrated environmental APIs and Random Forest models for site suitability, and deployed the application using Docker.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="education"><div class="wrap">
+  <h2>Education</h2>
+  <div class="timeline">
+    <div>
+      <h3>Vasireddy Venkatadri Institute of Technology, Nambur</h3>
+      <small>B.Tech in CSE (AI & ML) · 2023–2027</small><br>
+      <span class="score">CGPA 8.26</span>
+    </div>
+    <div>
+      <h3>Tirumala Mahila Junior Kalasala, Rajamahendravaram</h3>
+      <small>Intermediate · 2021–2023</small><br>
+      <span class="score">Marks 974</span>
+    </div>
+    <div>
+      <h3>Tirumala Proactive (EM) H.S, Rajamahendravaram</h3>
+      <small>SSC · 2020–2021</small><br>
+      <span class="score">Marks 600</span>
+    </div>
+  </div>
+</div></section>
+
+<section id="certs"><div class="wrap">
+  <h2>Certifications</h2>
+  <ul class="certs">
+    <li><b>Generative AI Certificate</b>, Google Cloud: 45 hours with 24 skill badges</li>
+    <li><b>Internship Certificate</b>, InternPe: Java Programming</li>
+    <li><b>Workshop</b>: Data Analysis Using Python</li>
+  </ul>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+  <h2>Let’s talk</h2>
+  <p>I’m open to internships and entry-level roles in software development and machine learning. Email is the fastest way to reach me.</p>
+  <div class="links">
+    <a class="btn main" href="mailto:girishmagiri13@gmail.com">girishmagiri13@gmail.com</a>
+    <a class="btn" href="tel:+917416297417">+91 74162 97417</a>
+    <a class="btn" href="https://github.com/Girishma13" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</div></section>
+
+<footer>© 2026 Girishma Lalam</footer>
+</body>
+</html>
